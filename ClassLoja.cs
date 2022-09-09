@@ -16,9 +16,26 @@ namespace SISTEMA_DE_PEDIDOS
 
         public static int PedidoId { get; private set; }
 
+        public static void OrdenandoLista()
+        {
+            Console.WriteLine("\n");
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("LISTA ORDENADA DE ITENS DE PEDIDO");
+            Console.WriteLine("------------------------------------------------------------------------------");
+            int orgarnizarID = 1;
+            foreach (string pedido in ClassPedido.listaPedidos)
+            {
+                Console.WriteLine("Pedido nº: " + orgarnizarID + "\n" + pedido + "\n");
+                orgarnizarID++;
+
+            }
+            Console.WriteLine("\n");
+        }
+
         
         public static void Menu()
         {
+            
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             // Atribuindo metodos da ClassPedido ao objeto InserirPedidoObj
             // Eu sei que da pra simplificar o codigo com isso, mas coloquei para não me perder nas atribuições e classes '-'
@@ -30,14 +47,14 @@ namespace SISTEMA_DE_PEDIDOS
             // Menu com Descritivos
             Console.WriteLine("                            ====•SISTEMA DE PEDIDOS====");
             Console.WriteLine("-------------------------------------------------------------------------------");
-            Console.WriteLine("");
             Console.WriteLine("1. Inserir Pedido ");
             Console.WriteLine("2. Buscar Pedido ");
             Console.WriteLine("3. Remover Pedido");
             Console.WriteLine("5. Ver todos os pedidos: ");
             Console.WriteLine("");
             Console.WriteLine("6. Sair");
-            Console.WriteLine("");
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            Console.WriteLine("\n");
 
             var menuSelecao = Console.ReadLine();
 
@@ -55,18 +72,17 @@ namespace SISTEMA_DE_PEDIDOS
 
             if (menuSelecao == "5")
             {
-                foreach (string ele in ClassPedido.listaPedidos) 
-                {
-                    Console.WriteLine(ele);
-                    
-                }
-                Console.WriteLine("\n");
+                OrdenandoLista();
             }
 
             if (menuSelecao == "6")
             {
                 Console.Clear();
                 Environment.Exit(1);
+            }
+            else
+            {
+                
             }
         }
 

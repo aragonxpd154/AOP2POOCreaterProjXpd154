@@ -62,57 +62,39 @@ namespace SISTEMA_DE_PEDIDOS
         // Criando uma lista de pedidos para registro
         public static List<string> listaPedidos = new();
 
-        //public List<ClassPedido> listaDePedidos = new();
-
+        // Metodo para Buscar Pedido
         public void BuscarPedido()
         {
-
+            Console.WriteLine("");
         }
-
-        //public static void inserirNaLista(int PedidoId, string DataEmissao, float valorDoProduto, string descricaoDoProduto)
-        //{
-         //   new ClassPedido { PedidoId = PedidoId, DataEmissao = DataEmissao, ValorDoProduto=valorDoProduto, DescricaoDoProduto=descricaoDoProduto };
-        //}
 
         public void InserirPedido()
         {
             
             // Validando Id
-            Console.WriteLine(PedidoId++);
-            //listaPedidos.Add(PedidoId.ToString());
+            //Console.WriteLine(PedidoId++);
 
             // Registando a data com metodo DateTime.Now
             DataEmissao = DateTime.Now.ToString("dd-MM-yyyy");
-            Console.WriteLine(DataEmissao);
-            //listaPedidos.Add(DataEmissao.ToString());
 
             // Amazenando a entrada valorDoProduto
-            Console.WriteLine("Entre com valor do produto: ");            
+            Console.WriteLine("♦ Entre com valor do produto: ");            
             valorDoProduto = Convert.ToSingle(Console.ReadLine());
-            //listaPedidos.Add(valorDoProduto.ToString());
-         
 
             // Amazendo a entrada valor do produto
-            Console.WriteLine("Entre com a descrição do produto: ");
+            Console.WriteLine("♦ Entre com a descrição do produto: ");
             descricaoDoProduto = Convert.ToString(Console.ReadLine());
-            //listaPedidos.Add(descricaoDoProduto.ToString());
 
             // Condicional se deseja aplicar um desconto Menor ou Maior
-            Console.WriteLine("Deseja aplicar um desconto? ");
+            Console.WriteLine("\n♦ Deseja aplicar um desconto? ");
             Console.WriteLine("1. Desconto Padrão");
             Console.WriteLine("2. Desconto Maior");
             Console.WriteLine("3. Não aplicar desconto");
+            Console.WriteLine("\n");
 
-            // Adicionando elementos na lista em questão
-            listaPedidos.Add("");
-            listaPedidos.Add(Convert.ToString(PedidoId));
-            listaPedidos.Add(DataEmissao);
-            listaPedidos.Add(Convert.ToString(valorDoProduto));
-            listaPedidos.Add(Convert.ToString(descricaoDoProduto));
-            listaPedidos.Add("\n");
             // Armazendo a seleção a variavel desconto
             desconto = Convert.ToInt32(Console.ReadLine());
-
+            Console.WriteLine("\n");
             // Condicional menu para chamar metodo especifico
             if (desconto == 1)
             {
@@ -125,18 +107,19 @@ namespace SISTEMA_DE_PEDIDOS
             }
             else
             {
-                Console.WriteLine("Voltando");
-                pedidoId++;
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.WriteLine("------------------------------------------------------------------------------");
+                Console.WriteLine("Pedido feito com sucesso");
+                Console.WriteLine("------------------------------------------------------------------------------");
+
+                string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
+                listaPedidos.Add(Pedido);
+                //pedidoId++;
                 return;
             }
 
-            CalcularPrecoTotal();
-
-
-
         }
-
-
 
         public static void CalcularPrecoTotal()
         {
