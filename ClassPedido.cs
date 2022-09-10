@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.ComponentModel.Design;
 
 namespace SISTEMA_DE_PEDIDOS
 {
@@ -50,7 +51,7 @@ namespace SISTEMA_DE_PEDIDOS
         }
 
         // Declarando variavel tipo privada para condição desconto
-        private int desconto;
+        private int desconto = 1;
 
         // Usando propriedade e encapsulamento {get} e {set} na public int "Desconto"
         public int Desconto
@@ -59,21 +60,60 @@ namespace SISTEMA_DE_PEDIDOS
             set { desconto = value; }
         }
 
+        // Declarando variavel tipo privada para condição IDconsulta (usaremos para consultar na lista)
+        private int IDconsulta;
+
+        // Usando propriedade e encapsulamento {get} e {set} na public int IDConsulta
+        public int IDConsulta
+        {
+            get { return IDconsulta; }
+            set { IDconsulta = value; }
+        }
+
         // Criando uma lista de pedidos para registro
         public static List<string> listaPedidos = new();
+
+        public void RegistrarPedido()
+        {
+            int a = 0; // teste
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("Pedido realizado com sucesso");
+            Console.WriteLine("------------------------------------------------------------------------------");
+
+            string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
+
+            listaPedidos.Add(Pedido);
+
+            return;
+        }
 
         // Metodo para Buscar Pedido
         public void BuscarPedido()
         {
-            Console.WriteLine("");
+            Console.Clear();
+            Console.WriteLine("♦ Digite o ID do pedido: ");
+            IDConsulta = (Convert.ToInt32(Console.ReadLine()));
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("CONSULTA A LISTA DE PEDIDOS POR ID");
+            Console.WriteLine("------------------------------------------------------------------------------\n");
+            IDConsulta--;
+            Console.WriteLine(listaPedidos[IDConsulta]);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("* - Para voltar ao Menu: ");
+            string varPraVoltar = (Console.ReadLine());
+            if (varPraVoltar == "*")
+            {
+                Console.Clear();
+                ClassLoja.Menu();
+            }
         }
 
         public void InserirPedido()
         {
-            
-            // Validando Id
-            //Console.WriteLine(PedidoId++);
-
+            while (desconto == 1) { 
             // Registando a data com metodo DateTime.Now
             DataEmissao = DateTime.Now.ToString("dd-MM-yyyy");
 
@@ -87,36 +127,33 @@ namespace SISTEMA_DE_PEDIDOS
 
             // Condicional se deseja aplicar um desconto Menor ou Maior
             Console.WriteLine("\n♦ Deseja aplicar um desconto? ");
-            Console.WriteLine("1. Desconto Padrão");
-            Console.WriteLine("2. Desconto Maior");
-            Console.WriteLine("3. Não aplicar desconto");
-            Console.WriteLine("\n");
+            Console.WriteLine("1 - Desconto Padrão");
+            Console.WriteLine("2 - Desconto Maior\n");
+     
+            Console.WriteLine("4 - Para confirmar o pedido");
 
             // Armazendo a seleção a variavel desconto
             desconto = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("\n");
+
             // Condicional menu para chamar metodo especifico
             if (desconto == 1)
             {
-                Console.WriteLine("TESTE");
+                Console.WriteLine("Desconto Padrao");
                 return;
             }
             else if (desconto == 2)
             {
                 Console.WriteLine("Desconto Maior");
             }
+            else if (desconto == 4)
+            {
+                RegistrarPedido();
+            }
             else
             {
-                Console.Clear();
-                Console.WriteLine("\n");
-                Console.WriteLine("------------------------------------------------------------------------------");
-                Console.WriteLine("Pedido feito com sucesso");
-                Console.WriteLine("------------------------------------------------------------------------------");
-
-                string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
-                listaPedidos.Add(Pedido);
-                //pedidoId++;
                 return;
+            }
             }
 
         }
@@ -125,5 +162,10 @@ namespace SISTEMA_DE_PEDIDOS
         {
             Console.WriteLine("Esse é o Preço Total: ijirnfefef");
         }
+    }
+
+    internal class Teste
+    {
+        public object DataEmissao { get; set; }
     }
 }

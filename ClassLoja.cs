@@ -30,6 +30,7 @@ namespace SISTEMA_DE_PEDIDOS
 
             }
             Console.WriteLine("\n");
+            return;
         }
 
         
@@ -37,52 +38,49 @@ namespace SISTEMA_DE_PEDIDOS
         {
             
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            // Atribuindo metodos da ClassPedido ao objeto InserirPedidoObj
-            // Eu sei que da pra simplificar o codigo com isso, mas coloquei para não me perder nas atribuições e classes '-'
-            // Depois faz uma limpa no code all right 
-            ClassPedido inserirPedido = new();
-            ClassPedido buscarPedido = new();
-            ClassPedido removerPedido = new();
+            // Atribuindo metodos da ClassPedido ao objeto linkClassPedido
+
+            ClassPedido LinkClassPedido = new();
 
             // Menu com Descritivos
             Console.WriteLine("                            ====•SISTEMA DE PEDIDOS====");
             Console.WriteLine("-------------------------------------------------------------------------------");
-            Console.WriteLine("1. Inserir Pedido ");
-            Console.WriteLine("2. Buscar Pedido ");
-            Console.WriteLine("3. Remover Pedido");
-            Console.WriteLine("5. Ver todos os pedidos: ");
+            Console.WriteLine("1 - Inserir Pedido ");
+            Console.WriteLine("2 - Buscar Pedido ");
+            Console.WriteLine("3 - Remover Pedido");
+            Console.WriteLine("4 - Ver todos os pedidos: ");
             Console.WriteLine("");
-            Console.WriteLine("6. Sair");
+            Console.WriteLine("5 - Sair");
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
-            var menuSelecao = Console.ReadLine();
+            int menuSelecao = Convert.ToInt32(Console.ReadLine());
 
-            if (menuSelecao == "1")
+            if (menuSelecao == 1)
             {
                 Console.Clear();
-                // Adicionando na variavel somatoria do valor registrado +1
-                PedidoId++;
                 // Link com objeto ao metodo InserirPedido()
-                inserirPedido.InserirPedido();
+                LinkClassPedido.InserirPedido();
            
             }
 
-            
-
-            if (menuSelecao == "5")
+            if (menuSelecao == 2)
+            {
+                LinkClassPedido.BuscarPedido();
+            }
+            if (menuSelecao == 4)
             {
                 OrdenandoLista();
             }
 
-            if (menuSelecao == "6")
+            if (menuSelecao == 5)
             {
                 Console.Clear();
                 Environment.Exit(1);
             }
             else
             {
-                
+                return;
             }
         }
 

@@ -14,6 +14,7 @@ namespace SISTEMA_DE_PEDIDOS
 
         public static void ValidarFuncionario()
         {
+            try { 
             string[] funcionariosNome = new string[] { "MARCOS", "LUIZ", "CAMILLY", "AMANDA" };
             int[] funcionariosMatri = new int[] { 2331, 6001, 1234, 2020, 0000 };
 
@@ -21,7 +22,7 @@ namespace SISTEMA_DE_PEDIDOS
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("                       ====•VALIDAR FUNCIONARIO====");
             Console.WriteLine("------------------------------------------------------------------------------");
-            Console.WriteLine("\n♦ Entre com nome: ");
+            Console.WriteLine("♦ Entre com nome: ");
             string FuncNome = Convert.ToString(Console.ReadLine());
             Console.Write(FuncNome);
 
@@ -38,10 +39,16 @@ namespace SISTEMA_DE_PEDIDOS
                 {
                     Console.Clear();
                     Console.WriteLine("\nNome do funcionario e/ou matricula errada: ");
-                    return;
+                    ValidarFuncionario();
                 }
             }
-               
+
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Digite um valor valido");
+                return;
+            }
         }
     }
 }
