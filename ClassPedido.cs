@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using System.ComponentModel.Design;
+using Microsoft.VisualBasic;
 
 namespace SISTEMA_DE_PEDIDOS
 {
@@ -73,17 +74,46 @@ namespace SISTEMA_DE_PEDIDOS
         // Criando uma lista de pedidos para registro
         public static List<string> listaPedidos = new();
 
+
+
+        // --------------------------------------------------------------
+        public static List<string> TesteLista = new();
+
+        public class TestePedido
+        {
+            public string Valor1 { get; set; } = string.Empty;
+            public string Valor2 { get; set; } = string.Empty;
+            public int Valor3 { get; set; }
+            public int Valor4 { get; set; }
+            public TestePedido()
+            { }
+
+            public TestePedido(string valor1, string valor2, int valor3, int valor4)
+            {
+                Valor1 = valor1;
+                Valor2 = valor2;
+                Valor3 = valor3;
+                Valor4 = valor4;
+            }
+        }
+
+
+
+
+       // -------------------------------------------------------------
+
         public void RegistrarPedido()
         {
-            int a = 0; // teste
             Console.Clear();
             Console.WriteLine("\n");
             Console.WriteLine("------------------------------------------------------------------------------");
             Console.WriteLine("Pedido realizado com sucesso");
             Console.WriteLine("------------------------------------------------------------------------------");
 
-            string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
+            // Metodo com lista 
 
+            string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
+            //string Pedido = (DataEmissao + "\n" + Convert.ToString(valorDoProduto) + "\n" + Convert.ToString(descricaoDoProduto));
             listaPedidos.Add(Pedido);
 
             return;
@@ -109,6 +139,14 @@ namespace SISTEMA_DE_PEDIDOS
                 Console.Clear();
                 ClassLoja.Menu();
             }
+        }
+
+
+
+        public static void CalcularPrecoTotal()
+        {
+            //for (int i = 0; i < listaPedidos.Length; 
+            Console.WriteLine("Esse é o Preço Total: ");
         }
 
         public void InserirPedido()
@@ -158,14 +196,5 @@ namespace SISTEMA_DE_PEDIDOS
 
         }
 
-        public static void CalcularPrecoTotal()
-        {
-            Console.WriteLine("Esse é o Preço Total: ijirnfefef");
-        }
-    }
-
-    internal class Teste
-    {
-        public object DataEmissao { get; set; }
     }
 }

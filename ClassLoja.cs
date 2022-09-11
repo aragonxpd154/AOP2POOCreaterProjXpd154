@@ -12,8 +12,6 @@ namespace SISTEMA_DE_PEDIDOS
     public class ClassLoja
     {
         // SubClasse de Acesso
-
-
         public static int PedidoId { get; private set; }
 
         public static void OrdenandoLista()
@@ -62,7 +60,7 @@ namespace SISTEMA_DE_PEDIDOS
                 // Link com objeto ao metodo InserirPedido()
                 LinkClassPedido.InserirPedido();
            
-            }
+            } 
 
             if (menuSelecao == 2)
             {
