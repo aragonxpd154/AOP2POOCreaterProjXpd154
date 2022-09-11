@@ -71,12 +71,20 @@ namespace SISTEMA_DE_PEDIDOS
             set { IDconsulta = value; }
         }
 
-        // Criando uma lista de pedidos para registro
+        // Declarando varialve tipo privada para condição IDremove (usaremos para remover na lista)
+        private int IDremove;
+
+        // Usando propriedade e encapsulamento {get} e {set} na public int IDRemover
+        public int IDRemove
+        {
+            get { return IDremove; }
+            set { IDremove = value; }
+        }
+
+        // Criando uma lista de pedidos para registro de acordo com criterios do diagrama de classes
         public static List<string> listaPedidos = new();
 
-
-
-        // --------------------------------------------------------------
+        // Testing scritp--------------------------------------------------------------
         public static List<string> TesteLista = new();
 
         public class TestePedido
@@ -97,11 +105,33 @@ namespace SISTEMA_DE_PEDIDOS
             }
         }
 
+        // Testing script-------------------------------------------------------------
 
+        // Método de Remoção de Pedido "RemoverPedido()"
+        public void RemoverPedido()
+        {
+            Console.Clear();
+            Console.WriteLine("♦ Digite o ID do pedido para remover-lo: ");
+            IDRemove = (Convert.ToInt32(Console.ReadLine()));
+            Console.WriteLine("------------------------------------------------------------------------------");
+            Console.WriteLine("A REMOVER DA LISTA DE PEDIDOS POR ID");
+            Console.WriteLine("------------------------------------------------------------------------------\n");
+            IDRemove--;
+            Console.WriteLine(listaPedidos[IDRemove]);
+            Console.WriteLine("\n");
 
-
-       // -------------------------------------------------------------
-
+            Console.WriteLine("* - Para voltar ao Menu: ");
+            string varPraVoltar = Console.ReadLine();
+            if (varPraVoltar == "*")
+            {
+                Console.Clear();
+                ClassLoja.Menu();
+            }
+            else
+            {
+                return;
+            }
+        }
         public void RegistrarPedido()
         {
             Console.Clear();
@@ -112,9 +142,11 @@ namespace SISTEMA_DE_PEDIDOS
 
             // Metodo com lista 
 
+            // Tratando string testing -----------------------------------------
             string Pedido = ("Data da Emissão: " + DataEmissao + "\n" + "Valor do Produto: " + Convert.ToString(valorDoProduto) + "\n" + "Descrição: " + Convert.ToString(descricaoDoProduto));
             //string Pedido = (DataEmissao + "\n" + Convert.ToString(valorDoProduto) + "\n" + Convert.ToString(descricaoDoProduto));
             listaPedidos.Add(Pedido);
+          
 
             return;
         }

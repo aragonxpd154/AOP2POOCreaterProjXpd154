@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-
+﻿
 namespace SISTEMA_DE_PEDIDOS
 {
     public class ClassLoja
@@ -30,7 +22,6 @@ namespace SISTEMA_DE_PEDIDOS
             Console.WriteLine("\n");
             return;
         }
-
         
         public static void Menu()
         {

@@ -8,13 +8,12 @@ namespace SISTEMA_DE_PEDIDOS
 {
     class ClassFuncionario
     {
-        // Lista de Funcionarios e suas respectivas matriculas relacionados
-        string[] funcionariosNome = new string[] { "MARCOS", "LUIZ", "CAMILLY", "AMANDA"};
-        int[] funcionariosMatri = new int[] { 2331, 6001, 1234, 2020, 0000 };
-
+        
         public static void ValidarFuncionario()
         {
             try { 
+
+            // Lista de Funcionarios e suas respectivas matriculas relacionados
             string[] funcionariosNome = new string[] { "MARCOS", "LUIZ", "CAMILLY", "AMANDA" };
             int[] funcionariosMatri = new int[] { 2331, 6001, 1234, 2020, 0000 };
 
@@ -27,12 +26,11 @@ namespace SISTEMA_DE_PEDIDOS
             Console.Write(FuncNome);
 
             Console.Write("♦ Entre com a matrícula: ");
-            int FuncMatric = Convert.ToInt32(Console.ReadLine());
+            int FuncMatric =Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("------------------------------------------------------------------------------");
             for (int incremento = 0; incremento < 5; incremento++) {
                 if (funcionariosNome.Contains(FuncNome) && funcionariosMatri.Contains(FuncMatric))
                 {
-                    
                     ClassLoja.Menu();
                 }
                 else
