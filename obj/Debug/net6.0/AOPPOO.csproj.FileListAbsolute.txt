@@ -1,0 +1,15 @@
+C:\Users\marco\Desktop\PROJETO\AOPPOO\bin\Debug\net6.0\AOPPOO.exe
+C:\Users\marco\Desktop\PROJETO\AOPPOO\bin\Debug\net6.0\AOPPOO.deps.json
+C:\Users\marco\Desktop\PROJETO\AOPPOO\bin\Debug\net6.0\AOPPOO.runtimeconfig.json
+C:\Users\marco\Desktop\PROJETO\AOPPOO\bin\Debug\net6.0\AOPPOO.dll
+C:\Users\marco\Desktop\PROJETO\AOPPOO\bin\Debug\net6.0\AOPPOO.pdb
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.csproj.AssemblyReference.cache
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.AssemblyInfoInputs.cache
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.AssemblyInfo.cs
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.csproj.CoreCompileInputs.cache
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.dll
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\refint\AOPPOO.dll
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.pdb
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\AOPPOO.genruntimeconfig.cache
+C:\Users\marco\Desktop\PROJETO\AOPPOO\obj\Debug\net6.0\ref\AOPPOO.dll
