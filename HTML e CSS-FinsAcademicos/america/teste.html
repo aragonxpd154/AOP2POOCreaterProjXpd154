@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Marcos Silva dos Santos" />
+    <title>Viajo+</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <meta name="keywords" content="Viajo+ | América |" />
+    <meta name="description" content="" Viajo+ Website Home />
+    <style>
+      /* Definindo estilo da pagina */
+      * {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-size: 12px;
+      }
+      @font-face {
+        font-family: fontfamily;
+        src: url('/font/KolkerBrush-Regular.ttf') format('opentype');
+      }
+
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        border: 0px solid #c0c0c0;
+        float: center;
+      }
+
+      .menu li {
+        position: center;
+        float: left;
+        border-right: 1px solid #c0c0c0;
+      }
+      .menu li a {
+        color: #333;
+        text-decoration: none;
+        padding: 5px 10px;
+        display: block;
+      }
+      .menu li a:hover {
+        background: #7f00ff;
+        color: #fff;
+        text-shadow: 0px 0px 5px #fff;
+      }
+      .menu li ul {
+        position: center;
+        top: 25px;
+        left: 0;
+        background-color: #fff;
+        display: none;
+      }
+      .menu li:hover ul,
+      .menu li.over ul {
+        display: block;
+      }
+      .menu li ul li {
+        border: 1px solid #c0c0c0;
+        display: block;
+        width: 150px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      .submenu {
+        float: left;
+        width: 20%;
+      }
+      .menuitem {
+        padding: 8px;
+        margin-top: 7px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+      .right {
+        background-color: #dfbeff;
+        float: left;
+        width: 20%;
+        padding: 10px 15px;
+        margin-top: 7px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        /* For tablets: */
+        .main {
+          width: 80%;
+          padding: 0;
+        }
+        .right {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        /* For mobile phones: */
+        .menu,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+    <div style="background-color: #65dca2; padding: 15px">
+      <img src="/img/logo.png" style="width: 100px" />
+      <h1 style="color: #293851; font-family: fontfamily">
+        A viagem do seus sonhos escrita nesse blog
+      </h1>
+    </div>
+    <div style="overflow: auto">
+      <nav>
+        <ul class="menu">
+          <li><a href="\index.html">Home</a></li>
+          <li><a href="index.html">América</a></li>
+          <li><a href="/asia/index.html">Ásia</a></li>
+          <li><a href="/europa/index.html">Europa</a></li>
+          <li><a href="/por-que-viajar/index.html">Por que Viajar ?</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div style="overflow: auto">
+      <div class="submenu">
+        <div class="menuitem" style="font-family: oswald">Estados Unidos</div>
+      </div>
+
+      <div class="main">
+        <article class="overviewer-viagemUSA">
+          <section class="estadosunidos">
+            <h2>Estados Unidos</h2>
+          </section>
+          <p>
+            Os Estados Unidos se estendem pela amplitude da América do Norte,
+            oferecendo uma vasta gama de paisagens e experiências. Faça uma
+            visita às cidades famosas do país ou alugue um carro e atravesse o
+            coração da nação. <br />Ao longo do corredor da costa do Atlântico,
+            cidades pequenas e outras importantes contam com locais históricos
+            importantes e centros culturais modernos. Siga a trilha Freedom
+            Trail em Boston, onde os primeiros patriotas agiram para criar a
+            nação em meados de 1770. A cidade de Nova York é um dos centros
+            econômicos mais importantes do mundo. Faça compras na Fifth Avenue,
+            assista a apresentações teatrais na Broadway, aprecie museus de
+            arte, caminhe no Central Park, veja times profissionais importantes
+            e aproveite pratos de diferentes etnias e culturas em pequenos
+            bairros pela cidade. Viaje na direção sul até Washington D.C., a
+            capital da nação, apinhada de prédios do governo, museus e
+            embaixadas internacionais. Passe pela Casa Branca e pelo National
+            Mall para ver monumentos homenageando alguns dos maiores líderes da
+            nação: Lincoln, Jefferson, Franklin Roosevelt, Martin Luther King,
+            Jr. e Washington.
+          </p>
+        </article>
+        <br />
+        <img src="img/figura3.png" style="width: 100%" />
+      </div>
+
+      <div class="right">
+        <section class="comprasPacote">
+          <h2>FAÇA SUA RESERVA AGORA</h2>
+        </section>
+        <article class="overviewer-orcamento">
+          <br />
+          <p>Venha fazer um orçamento conosco</p>
+          <br />
+          <h2>POR QUE É VANTAGEM <br />FECHAR PACOTE DE VIAGEM CONOSCO ?</h2>
+          <br />
+          <p>
+            Temos os melhores valores de pacote para voce e sua familia você
+            pode acompanhar a gente pelas redes sociais
+          </p>
+        </article>
+        <br />
+      </div>
+    </div>
+
+    <div
+      style="
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        margin-top: 7px;
+        font-size: 12px;
+      "
+    >
+      <footer>Copyright © All rights reserved</footer>
+    </div>
+  </body>
+</html>
