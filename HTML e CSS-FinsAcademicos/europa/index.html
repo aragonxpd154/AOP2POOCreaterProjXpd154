@@ -5,141 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Marcos Silva dos Santos" />
     <title>Viajo+</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <meta name="keywords" content="Viajo+" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <meta name="keywords" content="Viajo+ | América |" />
     <meta name="description" content="" Viajo+ Website Home />
     <style>
       /* Definindo estilo da pagina */
       * {
         box-sizing: border-box;
       }
-      *{margin: 0; padding: 0;}
-      body{
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
         font-size: 12px;
       }
       @font-face {
         font-family: fontfamily;
-        src: url('font/KolkerBrush-Regular.ttf') format('opentype');
+        src: url('/font/KolkerBrush-Regular.ttf') format('opentype');
+      }
+      @font-face {
+        font-family: oswald;
+        src: url('/font/Oswald-VariableFont_wght.ttf') format('opentype');
+      }
 
-}
-
-      .menu{
+      .menu {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        list-style:none; 
-        border:0px solid 
-        #c0c0c0;
-        float:center; }
+        list-style: none;
+        border: 0px solid #c0c0c0;
+        float: center;
+      }
 
-      .menu li{
-        position:center;
-        float:left; 
-        border-right:1px solid #c0c0c0; 
+      .menu li {
+        position: center;
+        float: left;
+        border-right: 1px solid #c0c0c0;
       }
-      .menu li a{
-        color:#333; 
-        text-decoration:none; 
-        padding:5px 10px; 
-        display:block;
+      .menu li a {
+        color: #333;
+        text-decoration: none;
+        padding: 5px 10px;
+        display: block;
       }
-      .menu li a:hover{
-        background:#7F00FF; 
-        color:#fff; 
-        text-shadow:0px 0px 5px #fff; 
+      .menu li a:hover {
+        background: #7f00ff;
+        color: #fff;
+        text-shadow: 0px 0px 5px #fff;
       }
-      .menu li   ul{
-        position:center; 
-        top:25px; left:0; 
-        background-color:#fff; 
-        display:none; 
+      .menu li ul {
+        position: center;
+        top: 25px;
+        left: 0;
+        background-color: #fff;
+        display: none;
       }
-      .menu li:hover ul, .menu li.over ul{
-        display:block;
+      .menu li:hover ul,
+      .menu li.over ul {
+        display: block;
       }
-      .menu li ul li{
-        border:1px solid #c0c0c0; 
-        display:block; 
-        width:150px;}
+      .menu li ul li {
+        border: 1px solid #c0c0c0;
+        display: block;
+        width: 150px;
+      }
 
-      .menuitem{
+      * {
+        box-sizing: border-box;
+      }
+      .submenu {
+        float: left;
+        width: 20%;
+      }
+      .menuitem {
         padding: 8px;
         margin-top: 7px;
-        border-bottom: 1px solid #F1f1f1;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+      .right {
+        background-color: #dfbeff;
+        float: left;
+        width: 20%;
+        padding: 10px 15px;
+        margin-top: 7px;
+      }
+      .botao {
+        padding: 5px 10px;
+        background: #7f00ff;
+        color: #000;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        border-radius: 3px;
       }
 
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
-        padding: 20px;
+      @media only screen and (max-width: 800px) {
+        /* Só pra tablets: */
+        .main {
+          width: 80%;
+          padding: 0;
+        }
+        .right {
+          width: 100%;
+        }
       }
-      .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 0.5px solid rgb(88, 85, 85);
-        text-align: center;
-        font-size: auto;
-}
+      @media only screen and (max-width: 500px) {
+        /* Só para aplicativos: */
+        .menu,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
     </style>
   </head>
 
   <body style="font-family: Verdana, Geneva, Tahoma, sans-serif">
-    <div style="background-color: #65DCA2; padding:15px;">
-      <img src="img/logo.png" style="width:100px">
-    <h1 style="color:#293851; font-family: fontfamily;">A viagem do seus sonhos escrita nesse blog</h1>
-  </div>
-  <div style="overflow:auto" >
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/america/">América</a></li>
-        <li><a href="#">Ásia</a></li>
-        <li><a href="#">Europa</a></li>
-        <li><a href="#">Por que Viajar ?</a></li>
-    </ul>
-  </nav>
-  </div>
-
-    <div class="grid-container">
-      <div><img src="america/img/figura1.png" style="width:100%" overflow: hidden;></div>
-      <div>
-        <h2 style="color:#293851; font-family: oswald;">AMÉRICA</h2><br>
-        <p align="justify" style="color:#293851; font-family: oswald; font-size:19px;">&nbsp&nbsp&nbsp&nbspViaje para a América! Veja abaixo as informações para a sua viagem à América do Sul,
-        América do Norte, América Central e Caribe. 
-          América é o único continente cujo nome é de origem pagã, uma homenagem ao 
-          navegador italiano Américo Vespúcio. A América é 
-          dividida entre os sub-continentes da América Central, 
-          América do Norte e América do Sul.</p></div>
-      <div><h2 style="color:#293851; font-family: oswald;">ÁSIA</h2><br>
-        <p align="justify" style="color:#293851; font-family: oswald; font-size:19px;">&nbsp&nbsp&nbsp&nbspNa Ásia, você pode visitar templos pacíficos e serenos no campo, praias agradáveis e cidades ultramodernas. Planeje as férias em países específicos ou passe um verão mochilando pelo continente.
-
-          A China ocupa mais da metade da área da Ásia e tem mais de 1,3 
-          bilhão de habitantes, muitos vivendo nas grandes cidades de Xangai,
-           Cantão, Shenzhen e Pequim. Aprecie a mistura da cultura chinesa 
-           com a sofisticação moderna, veja os templos e museus de antigas 
-           dinastias e faça compras de luxo perto de feiras de bairro com 
-           alimentos frescos de todos os tipos.</p></div>  
-      <div><img src="asia/img/figura2.png" style="width:100%"></div>
-      <div><img src="europa/img/figura3.jpg" style="width:100%"></div>
-      <div><h2 style="color:#293851; font-family: oswald;">EUROPA</h2><br>
-        <p align="justify" style="color:#293851; font-family: oswald; font-size:19px;">&nbsp&nbsp&nbsp&nbspCerca de 30 países da União Europeia têm uma moeda 
-          única e um controle de fronteiras flexível, o que facilita bastante 
-          as viagens na Europa. É possível chegar em vários países em passeios 
-          de trem de algumas horas. Das nações do Ciclo Ártico-Nórdico aos países
-           quentes do sul do Mediterrâneo, você encontrará cidades modernas e
-           vestígios de civilizações antigas.
-
-          Visite a Itália e a Grécia para conhecer as ruínas de antigos impérios. 
-          Em Roma, veja o coliseu, em Atenas, a acrópole. Relaxe nas 
-          praias deslumbrantes de ambos os países. Explore as mais de 
-          6 mil ilhas da Grécia e veja o Mar da Ligúria do alto, de trilhas 
-          de caminhada ao longo dos vinhedos em Cinque Terre, na Itália. 
-          Veja o papa na Cidade do Vaticano, o menor país da Europa.</p></div>
-      
+    <div style="background-color: #65dca2; padding: 15px">
+      <img src="/img/logo.png" style="width: 100px" />
+      <h1 style="color: #293851; font-family: fontfamily">
+        A viagem do seus sonhos escrita nesse blog
+      </h1>
     </div>
-  </div>
-  <div style="background-color: #F2F2F2;text-align:center;padding:10px; margin-top:7px; font-size:12px;"><footer> Copyright © All rights reserved</footer></div>
-  
+    <div style="overflow: auto">
+      <nav>
+        <ul class="menu">
+          <li><a href="\index.html">Home</a></li>
+          <li><a href="/america/index.html">América</a></li>
+          <li><a href="index.html">Ásia</a></li>
+          <li><a href="/europa/index.html">Europa</a></li>
+          <li><a href="/por-que-viajar/index.html">Por que Viajar ?</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div style="overflow: auto">
+      <div class="submenu">
+        <div class="menuitem" style="font-family: oswald">Indonésia</div>
+        <div class="menuitem" style="font-family: oswald">Índia</div>
+        <div class="menuitem" style="font-family: oswald">Tailândia</div>
+        <div class="menuitem" style="font-family: oswald">China</div>
+        <div class="menuitem" style="font-family: oswald">Nepal</div>
+        <div class="menuitem" style="font-family: oswald">Vietnã</div>
+      </div>
+
+      <div class="main">
+        <article class="overviewer-viagemUSA">
+          <section class="estadosunidos">
+            <h2 align="center" style="font-family: oswald">
+              <br />CATMANDU - NEPAL
+            </h2>
+            <br /><br />
+          </section>
+          <p align="justify">
+            A capital do Nepal é cercada por um vale repleto de locais
+            históricos, templos e santuários antigos, e vilarejos fascinantes.
+            Misture-se com os locais e animais entre os monumentos de Durbar
+            Square ou com mochileiros praticantes de trilhas no agitado Thamel
+            District. Explore lojas em busca do artesanato refinado dos artesãos
+            locais. Carpetes e gravuras em papel são as especialidades. Thamel é
+            a parte mais antiga da capital. Também era conhecida como Tabitha
+            Bahal, e merece uma visita obrigatoriamente. É um dos bairros mais
+            movimentados da cidade de Catmandu. Aqui vais encontrar de tudo, até
+            equipamento de montanha para te preparares para as caminhada, a
+            preços muito baixos. Existem, também, lojas de antiguidades,
+            livrarias, restaurantes cafés e uma mistura de diferentes hotéis e
+            albergues.<br />
+          </p>
+          <br />
+          <img src="img/figura3.jpg" style="width: 100%" />
+          <p aligh="justify">
+            <br />
+            Localizado no alto de uma colina, a oeste da cidade de Catmandu,
+            pode ser alcançado por uma subida de 365 degraus em pedra. Uma das
+            primeiras coisas que vais notar, mesmo antes de começares a
+            caminhada, são os macacos. Centenas deles vivem e circulam pelas
+            instalações do templo. Acredita-se que eles sejam sagrados, embora
+            seja melhor não pensar sobre o motivo: dizem que eles foram formados
+            a partir dos piolhos da divindade budista Manjushri, que foi criada
+            neste local. Este santuário ostenta uma stupa branca imponente com
+            os cativantes olhos de Buda e uma torre dourada cintilante.
+            Swayambhunath oferece uma vista panorâmica da cidade e mostra-te
+            exatamente como Catmandu está no fundo de um vale, com os milhares
+            de casinhas todas acumuladas no fundo. Neste local vais encontrar
+            muitos monges, peregrinos e muitos habitantes que vêm até aqui
+            rezar, ou fazer uma paragem para comer. <br />
+          </p>
+        </article>
+        <br />
+        <img src="img/figura4.jpg" style="width: 100%" />
+      </div>
+
+      <div class="right">
+        <section class="comprasPacote">
+          <h2 style="font-family: oswald">FAÇA SUA RESERVA AGORA</h2>
+        </section>
+        <article class="overviewer-orcamento">
+          <br />
+          <p>Venha fazer um orçamento conosco</p>
+          <br />
+          <h2 style="font-family: oswald">
+            POR QUE É VANTAGEM <br />FECHAR PACOTE DE VIAGEM CONOSCO ?
+          </h2>
+          <br />
+          <p>
+            Temos os melhores valores de pacote para voce e sua familia você
+            pode acompanhar a gente pelas redes sociais
+          </p>
+          <br />
+          <a href="#" class="botao">Fazer Orçamento</a>
+        </article>
+        <br />
+      </div>
+    </div>
+
+    <div
+      style="
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        margin-top: 7px;
+        font-size: 12px;
+      "
+    >
+      <footer>Copyright © All rights reserved</footer>
+    </div>
   </body>
 </html>

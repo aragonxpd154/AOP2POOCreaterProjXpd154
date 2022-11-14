@@ -24,6 +24,10 @@
         font-family: fontfamily;
         src: url('/font/KolkerBrush-Regular.ttf') format('opentype');
       }
+      @font-face {
+        font-family: oswald;
+        src: url('/font/Oswald-VariableFont_wght.ttf') format('opentype');
+      }
 
       .menu {
         display: flex;
@@ -93,9 +97,17 @@
         padding: 10px 15px;
         margin-top: 7px;
       }
+      .botao {
+        padding: 5px 10px;
+        background: #7f00ff;
+        color: #000;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        border-radius: 3px;
+      }
 
       @media only screen and (max-width: 800px) {
-        /* For tablets: */
+        /* Só pra tablets: */
         .main {
           width: 80%;
           padding: 0;
@@ -105,7 +117,7 @@
         }
       }
       @media only screen and (max-width: 500px) {
-        /* For mobile phones: */
+        /* Só para aplicativos: */
         .menu,
         .main,
         .right {
@@ -144,14 +156,16 @@
       <div class="main">
         <article class="overviewer-viagemUSA">
           <section class="estadosunidos">
-            <h2 style="font-family: oswald">ESTADOS UNIDOS</h2>
+            <h2 align="center" style="font-family: oswald">
+              <br />TIMES SQUARE - ESTADOS UNIDOS
+            </h2>
             <br /><br />
           </section>
-          <p>
+          <p align="justify">
             Os Estados Unidos se estendem pela amplitude da América do Norte,
             oferecendo uma vasta gama de paisagens e experiências. Faça uma
             visita às cidades famosas do país ou alugue um carro e atravesse o
-            coração da nação. <br />Ao longo do corredor da costa do Atlântico,
+            coração da nação. Ao longo do corredor da costa do Atlântico,
             cidades pequenas e outras importantes contam com locais históricos
             importantes e centros culturais modernos. Siga a trilha Freedom
             Trail em Boston, onde os primeiros patriotas agiram para criar a
@@ -167,25 +181,49 @@
             nação: Lincoln, Jefferson, Franklin Roosevelt, Martin Luther King,
             Jr. e Washington.
           </p>
+          <br />
+          <img src="img/figura3.png" style="width: 100%" /><br />
+          <p align="justify">
+            <br />
+            Anteriomente conhecida no início como Longacre Square (também
+            escrita Longacre), a Times Square tinha uma reputação desagradável
+            como o centro de atividades ilícitas na década de 1890, embora no
+            início do século XIX tenha sido uma área comercial e residencial. A
+            praça foi renomeada em 1904 para The New York Times , que abriu seus
+            novos escritórios na Times Tower na praça (embora os superasse em
+            1913). Quase imediatamente a praça tornou-se o local onde os
+            nova-iorquinos se reuniam para celebrar a chegada do novo ano. Em
+            1907, o Times começou a baixar uma enorme bola de vidro no mastro da
+            bandeira à meia-noite na véspera de Ano Novo para marcar a ocasião.
+            Ao longo dos anos, tecnologia cada vez mais sofisticada foi usada
+            para o lançamento da bola no quadrado, pois a tradição passou a
+            incluir transmissões de televisão ao vivo que compartilhavam a
+            experiência com dezenas de milhões de pessoas nos Estados Unidos .
+          </p>
+          <br />
+          <img src="img/figura4.jpg" style="width: 100%" /><br />
         </article>
         <br />
-        <img src="img/figura3.png" style="width: 100%" />
       </div>
 
       <div class="right">
         <section class="comprasPacote">
-          <h2>FAÇA SUA RESERVA AGORA</h2>
+          <h2 style="font-family: oswald">FAÇA SUA RESERVA AGORA</h2>
         </section>
         <article class="overviewer-orcamento">
           <br />
           <p>Venha fazer um orçamento conosco</p>
           <br />
-          <h2>POR QUE É VANTAGEM <br />FECHAR PACOTE DE VIAGEM CONOSCO ?</h2>
+          <h2 style="font-family: oswald">
+            POR QUE É VANTAGEM <br />FECHAR PACOTE DE VIAGEM CONOSCO ?
+          </h2>
           <br />
           <p>
             Temos os melhores valores de pacote para voce e sua familia você
             pode acompanhar a gente pelas redes sociais
           </p>
+          <br />
+          <a href="#" class="botao">Fazer Orçamento</a>
         </article>
         <br />
       </div>
