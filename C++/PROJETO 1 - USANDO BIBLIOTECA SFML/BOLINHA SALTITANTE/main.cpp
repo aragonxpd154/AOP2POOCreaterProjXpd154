@@ -1,37 +1,53 @@
 #include <SFML/Graphics.hpp>
+#include <cmath>
 
 int main()
 {
-    // Create the main window
-    sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
+    // Cria a janela
+    sf::RenderWindow window(sf::VideoMode(400, 400), "Bolinha saltitante");
 
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile("cb.bmp"))
-        return EXIT_FAILURE;
-    sf::Sprite sprite(texture);
+    // Cria a bolinha
+    sf::CircleShape ball(10.0f);
+    ball.setFillColor(sf::Color::Green);
+    ball.setPosition(50, 50);
 
-	// Start the game loop
-    while (app.isOpen())
+    // Configura a velocidade da bolinha
+    sf::Vector2f velocity(2.0f, 2.0f);
+
+    // Inicia o relógio para controlar o frame rate
+    sf::Clock clock;
+
+    // Executa o loop principal
+    while (window.isOpen())
     {
-        // Process events
+        // Processa os eventos da janela
         sf::Event event;
-        while (app.pollEvent(event))
+        while (window.pollEvent(event))
         {
-            // Close window : exit
             if (event.type == sf::Event::Closed)
-                app.close();
+                window.close();
         }
 
-        // Clear screen
-        app.clear();
+        // Atualiza a posição da bolinha
+        sf::Time elapsed = clock.restart();
+        ball.move(velocity * elapsed.asSeconds());
 
-        // Draw the sprite
-        app.draw(sprite);
+        // Verifica se a bolinha chegou aos limites da tela
+        sf::Vector2f ballPos = ball.getPosition();
+        if (ballPos.x + 20 > window.getSize().x || ballPos.x - 10 < 0)
+        {
+            velocity.x = -velocity.x;
+        }
+        if (ballPos.y + 20 > window.getSize().y || ballPos.y - 10 < 0)
+        {
+            velocity.y = -velocity.y;
+        }
 
-        // Update the window
-        app.display();
+        // Desenha a bolinha na tela
+        window.clear();
+        window.draw(ball);
+        window.display();
     }
 
-    return EXIT_SUCCESS;
+    return 0;
 }
