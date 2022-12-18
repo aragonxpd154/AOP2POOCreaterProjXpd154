@@ -2,21 +2,26 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="BOLINHA" />
+		<Option title="bolinha" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/BOLINHA" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/bolinha" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
+				<Linker>
+					<Add library="sfml-graphics-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-system-d" />
+				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/BOLINHA" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/bolinha" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -25,26 +30,25 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="C:/Program Files/CodeBlocks/BIBLIOTECA/SDL2-2.26.1/x86_64-w64-mingw32/include" />
+			<Add directory="C:/Users/marco/Documents/GitHub/AOPsUVV/C++/PROJETO 1 - USANDO BIBLIOTECA SFML/BIBLIOTECA/SFML-2.5.1-windows-gcc-5.1.0-tdm-32-bit/SFML-2.5.1/include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
-			<Add library="SDL2main" />
-			<Add library="SDL2.dll" />
 			<Add library="user32" />
 			<Add library="gdi32" />
 			<Add library="winmm" />
 			<Add library="dxguid" />
-			<Add directory="C:/Program Files/CodeBlocks/BIBLIOTECA/SDL2-2.26.1/x86_64-w64-mingw32/lib" />
+			<Add directory="C:/Users/marco/Documents/GitHub/AOPsUVV/C++/PROJETO 1 - USANDO BIBLIOTECA SFML/BIBLIOTECA/SFML-2.5.1-windows-gcc-5.1.0-tdm-32-bit/SFML-2.5.1/lib" />
 		</Linker>
-		<ExtraCommands>
-			<Add after="XCOPY $(#sdl2)\bin\*.dll $(TARGET_OUTPUT_DIR) /D /Y" />
-		</ExtraCommands>
+		<Unit filename="cb.bmp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
