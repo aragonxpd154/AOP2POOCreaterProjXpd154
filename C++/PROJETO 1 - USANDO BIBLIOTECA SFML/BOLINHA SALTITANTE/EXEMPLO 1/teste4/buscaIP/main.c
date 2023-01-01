@@ -2,8 +2,15 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+    // Abre o arquivo CSV para escrita
+    FILE *csv = fopen("ips.csv", "w");
+    if (csv == NULL) {
+        perror("Erro ao abrir o arquivo CSV");
+        return 1;
+    }
+
     // Define o intervalo de endereços IP da rede
-    const char *network = "192.168.1.";
+    const char *network = "192.168.1";
 
     // Itera sobre os endereços IP da rede
     for (int i = 0; i < 255; i++) {
@@ -16,10 +23,13 @@ int main(int argc, char *argv[]) {
 
         // Verifica se o comando ping teve sucesso
         if (result == 0) {
-            // O endereço IP está respondendo ao ping, então exibe-o para o usuário
-            printf("%s.%d\n", network, i);
+            // O endereço IP está respondendo ao ping, então salva-o no arquivo CSV
+            fprintf(csv, "%s.%d\n", network, i);
         }
     }
+
+    // Fecha o arquivo CSV
+    fclose(csv);
 
     return 0;
 }

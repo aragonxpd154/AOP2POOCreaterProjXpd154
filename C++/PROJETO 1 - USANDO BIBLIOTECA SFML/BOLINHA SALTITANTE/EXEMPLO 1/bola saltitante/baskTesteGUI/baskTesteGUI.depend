@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1671407622 source:c:\users\marco\documents\github\aopsuvv\c++\projeto 1 - usando biblioteca sfml\bolinha saltitante\exemplo 1\bola saltitante\basktestegui\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
