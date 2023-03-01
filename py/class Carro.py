@@ -15,5 +15,3 @@ class Carro:
         self.cor = cor
         # Atribuindo um valor ao atributo quantidades_de_porta
         self.quantidades_de_porta = quantidades_de_porta
-    
-    
