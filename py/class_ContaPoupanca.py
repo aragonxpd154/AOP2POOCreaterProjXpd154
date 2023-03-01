@@ -18,5 +18,6 @@ class ContaPoupanca():
             return self.saldo
         else:
             return -1
-contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')    
+contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
+print('O saldo inicial da conta de {} e R$ {:.2f}'.format(contaPoupancaDeJose.titular, contaPoupancaDeJose.saldo))
 
