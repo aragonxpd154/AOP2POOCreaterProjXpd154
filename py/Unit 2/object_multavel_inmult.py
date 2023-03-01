@@ -19,3 +19,12 @@ def naoAlteraString(palavra):
 minhaPalavra = 'antiga'
 naoAlteraString(minhaPalavra)
 print(f'A palavra é: {minhaPalavra}')
+
+def alteraLista(lista):
+    print(f'A lista inicial (dentro da função) é:{lista}')
+    lista.append('3')
+    print(f'A lista final (dentro da função) é:{lista}')
+
+minhaLista = ['a', 'b', 'c']
+alteraLista(minhaLista)
+print(f'A lista é: {minhaLista}')
