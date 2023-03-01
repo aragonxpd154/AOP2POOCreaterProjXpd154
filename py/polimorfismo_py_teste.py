@@ -80,7 +80,13 @@ contaCorrenteDeGabriel.transferir(200, contaPoupancaDeJose)
 contaCorrenteDeMarianaComTaxa = ContaCorrenteComTaxa(250, '789', 'Mariana')
 
 print('O saldo inicial da conta de {} é R${:.2f}'.format(contaCorrenteDeMarianaComTaxa.getTitular(),
-                                                         contaCorrenteDeMArianaComTaxa.getSaldo()))
+                                                         contaCorrenteDeMarianaComTaxa.getSaldo()))
 
 contaCorrenteDeMarianaComTaxa.transferir(200, contaCorrenteDeGabriel)
+print ('O saldo da conta de {} apos transferencia de R$200,00 para a conta de {} é de R${:.2f}'.format(contaCorrenteDeMarianaComTaxa.getTitular(),
+                                                                                                       contaCorrenteDeGabriel.getTitular(),
+                                                                                                       contaCorrenteDeMarianaComTaxa.getSaldo()))
+
+print('O saldo após transferência de R$200.00 na conta de {} é de R${:.2f}'.format(contaCorrenteDeGabriel.getTitular(),
+                                                                                   contaCorrenteDeGabriel.getSaldo()))
 
