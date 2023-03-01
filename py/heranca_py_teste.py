@@ -55,3 +55,12 @@ class ContaCorrente(ContaPoupanca):
             return self.getSaldo()
         else:
             return -1
+
+# Considerando que o Gabriel deseja transferir uma quantia para o Jose
+# Para realizar este procedimento pode-se utilizar o método implementado anteriomente, conforme o code abaixo
+
+contaCorrenteDeGabriel = ContaCorrente(600, '456', 'Gabriel')
+
+print('O saldo inicial da conta de {} é R${:.2f}'.format(contaCorrenteDeGabriel.getTitular(), contaCorrenteDeGabriel.getSaldo()))
+
+
