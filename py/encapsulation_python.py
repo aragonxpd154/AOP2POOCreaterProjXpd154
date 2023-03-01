@@ -44,7 +44,7 @@ class ContaPoupanca():
 #print(contaPoupancaDeJose.__saldo)
 
 # Acessando atributo privado maneira correta
-#contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
+contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
 #print('O saldo inicial da conta de {} e R$ {:.2f}'.format(contaPoupancaDeJose.getTitular(), contaPoupancaDeJose.getSaldo()))
 
 # Com o método "setSaldo" implementado, podemos agora inserir um novo valor de saldo para a conta, conforme o trecho de code abaixo:
