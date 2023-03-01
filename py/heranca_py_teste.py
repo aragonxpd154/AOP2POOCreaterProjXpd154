@@ -47,7 +47,7 @@ class ContaCorrente(ContaPoupanca):
     def transferir(self, valor, contaDestino):
         # Validamos se o saldo atual é maior que o solicitado
         # Retiramos o valor da ContaCorrente
-        if(self,getSaldo() > valor):
+        if(self.getSaldo() > valor):
             self.sacar(valor)
             # Depositamos o valor na ContaDestino(ContaCorrente ou ContaPoupanca)
             contaDestino.depositar(valor)
@@ -55,6 +55,9 @@ class ContaCorrente(ContaPoupanca):
             return self.getSaldo()
         else:
             return -1
+        
+contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
+print('O saldo inicia da conta de {} e R${},00'.format(contaPoupancaDeJose.getTitular(), contaPoupancaDeJose.getSaldo()))
 
 # Considerando que o Gabriel deseja transferir uma quantia para o Jose
 # Para realizar este procedimento pode-se utilizar o método implementado anteriomente, conforme o code abaixo
@@ -63,4 +66,5 @@ contaCorrenteDeGabriel = ContaCorrente(600, '456', 'Gabriel')
 
 print('O saldo inicial da conta de {} é R${:.2f}'.format(contaCorrenteDeGabriel.getTitular(), contaCorrenteDeGabriel.getSaldo()))
 
-
+contaCorrenteDeGabriel.transferir(200, contaPoupancaDeJose)
+print('O saldo da conta de {} após transferencia de R$200,00 para a conta de {} é de R${:.2f}'.format(contaCorrenteDeGabriel.getTitular(), contaPoupancaDeJose.getTitular(), contaCorrenteDeGabriel.getSaldo()))
