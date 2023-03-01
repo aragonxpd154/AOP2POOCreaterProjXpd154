@@ -39,11 +39,14 @@ class ContaPoupanca():
             return -1
     
 
-# Acessando atributo privado metodo comum
+# Acessando atributo privado metodo comum (Vai da erro de acesso nivel de encapsulamento de atributo privado)
 #contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
 #print(contaPoupancaDeJose.__saldo)
 
 # Acessando atributo privado maneira correta
-contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
-print('O saldo inicial da conta de {} e R$ {:.2f}'.format(contaPoupancaDeJose.getTitular(), contaPoupancaDeJose.getSaldo()))
+#contaPoupancaDeJose = ContaPoupanca(300, '123', 'José')
+#print('O saldo inicial da conta de {} e R$ {:.2f}'.format(contaPoupancaDeJose.getTitular(), contaPoupancaDeJose.getSaldo()))
 
+# Com o método "setSaldo" implementado, podemos agora inserir um novo valor de saldo para a conta, conforme o trecho de code abaixo:
+contaPoupancaDeJose.setSaldo(500)
+print('O saldo inicia da conta de {} e R${},00'.format(contaPoupancaDeJose.getTitular(), contaPoupancaDeJose.getSaldo()))
