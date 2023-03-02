@@ -61,3 +61,7 @@ print(f'A listaDeNumeros pos POP(3): {listaDeNumeros}')
 listaDeNumeros.remove(25)
 listaDeNumeros
 
+
+# Contando a quantidades de vezes que um elemento aparece na lista
+listaDeNumeros.count(25)
+
