@@ -34,6 +34,10 @@ print(f'O ultimo indice de listaSimple é {len(listaSimples)-1}')
 # Criando lista 
 listaDeNumeros = [25, 36, 98, 54, 25, 25]
 
+# Criando lista  2
+listaDeNumeros2 = [25, 36, 98, 54, 25, 25]
+
+
 print(f'A listaDeNumeros inicial tem os elementos {listaDeNumeros}')
 
 # Inserindo elemento na lista
@@ -63,5 +67,4 @@ listaDeNumeros
 
 
 # Contando a quantidades de vezes que um elemento aparece na lista
-listaDeNumeros.count(25)
-
+listaDeNumeros2.count(25)
