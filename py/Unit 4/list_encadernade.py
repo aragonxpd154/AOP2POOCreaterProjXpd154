@@ -6,3 +6,6 @@ class Nodo:
     def __repr__(self):
         return f"{self.dado} -> {self.dado}"
     
+    def setProximo(self, proximoNodo):
+        self.proximo = proximoNodo
+    
