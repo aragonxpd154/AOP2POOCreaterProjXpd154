@@ -12,7 +12,7 @@ stack = []
 #    print(stack)
     
     
-print('\n')
+#print('\n')
 # Use top
 
 for i in range(10):
