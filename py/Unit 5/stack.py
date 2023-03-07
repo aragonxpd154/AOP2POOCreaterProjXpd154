@@ -7,6 +7,14 @@
 
 stack = []
 
+#for i in range(10):
+#    stack.append(i)
+#    print(stack)
+    
+    
+print('\n')
+# Use top
+
 for i in range(10):
     stack.append(i)
-    print(stack)
+    print(stack, "Top = %d" %stack [len(stack)-1])
