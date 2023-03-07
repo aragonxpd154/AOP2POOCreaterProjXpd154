@@ -22,3 +22,6 @@ for i in range(10):
 lastTop = stack.pop()
 print("last Top = %d" % lastTop, stack)
 
+while (len(stack) != 0):
+    print(stack, "Top = %d" %stack [len(stack)-1])
+    stack.pop()
