@@ -20,5 +20,5 @@ class Nodo:
 # A segui, criando um nodo com instância do objeto
 
 nodo = Nodo(5)
-print(f"O valor do dado é {nodo.dado} e a \ referência para o proximo elemento é {nodo.proximo}")
+print(f"O valor do dado é {nodo.dado} e a referência para o proximo elemento é {nodo.proximo}")
 print(f'A representação do Nodo é; {nodo}')
