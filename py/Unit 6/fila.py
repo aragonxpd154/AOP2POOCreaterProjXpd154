@@ -8,7 +8,7 @@ class Fila:
         self.itens.append(item)
     
     def dequeue(self):
-        return self.intens.pop(0)
+        return self.itens.pop(0)
     
     def inEmpty(self):
         return self.itens == []
@@ -39,3 +39,5 @@ estacionamento.enqueue("Carro Vermelho")
 print("Esses são os carros que estão na fila do estacionamento: \n" , estacionamento.itens)
 print("\n")
 
+# Estacionando o carro que chegou primeiro na fila
+estacionamento.dequeue()
