@@ -18,12 +18,23 @@ class Fila:
     
     # Instanciandno um objeto estacionamento que recebe a clasee Fila()
     
-    # Verificando se a fila está vazia ou não
+# Verificando se a fila está vazia ou não
+print("\n")
     
 estacionamento = Fila()
     
-if fila.isEmpty:
+if Fila.inEmpty:
     print("Não há elementos na fila!!")
 else:
     print("Há elementos na fila!!")
-        
+    
+print("\n")
+
+# Inserindo carros na fila do estacionamento
+
+estacionamento.enqueue("Carro Azul")
+estacionamento.enqueue("Carro Verde")
+estacionamento.enqueue("Carro Vermelho")
+
+print("Esses são os carros que estão na fila do estacionamento: \n" , estacionamento.itens)
+print("\n\n")
