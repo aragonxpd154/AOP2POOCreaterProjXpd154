@@ -80,13 +80,14 @@ print("\n")
 class Pessoa:
     def __init__(self, nome):
         self.nome = nome
-        
+        self.itens = []
+        self._indice = 0
     def __repr__(self):
         return self.nome
     
     def enqueue(self, item, prioridade):
-    heapq.heappush(self.itens, (-prioridade, self._indice, item))
-    self._indice += 1
+        heapq.heappush(self.itens, (-prioridade, self._indice, item))
+        self._indice += 1
 
 pronto_socorro = FilaPrioridade()
 pronto_socorro.enqueue(Pessoa('Idoso'), 20)
@@ -95,3 +96,6 @@ pronto_socorro.enqueue(Pessoa('Idosa'), 20)
 print("Pessoas na fila:\n")
 print(pronto_socorro)
 
+while not pronto_socorro.isEmpty():
+    print("Próxima Pessoa a ser atendida: ", pronto_socorro.dequeue())
+    
