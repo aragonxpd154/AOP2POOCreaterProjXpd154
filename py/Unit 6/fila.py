@@ -45,10 +45,24 @@ print("\n")
 estacionamento.dequeue()
 
 class FilaPrioridade:
-    def __int__(self):
+    
+    def __init__(self):
         self.itens = []
         self._indice = 0
     
     def __str__(self):
         return '\n'.join([str(i) for i in self.itens])
+    
+    def isEmpty(self):
+        return self.itens == []
+    
+    def enqueue(self, item, prioridade):
+        heapq.heappush(self.itens, (-prioridade, self._indice, item))
+        self._indice += 1
+
+fila_prioridade = FilaPrioridade()
+fila_prioridade.enqueue('Info Dados', 1) # empresa
+fila_prioridade.enqueue('Gabriel Gomes', 2) # Cliente Normal
+fila_prioridade.enqueue('Mariana Lima', 5) # Cliente idosa
+print(fila_prioridade)
     
