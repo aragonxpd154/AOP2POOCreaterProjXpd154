@@ -59,6 +59,9 @@ class FilaPrioridade:
     def enqueue(self, item, prioridade):
         heapq.heappush(self.itens, (-prioridade, self._indice, item))
         self._indice += 1
+        
+    def dequeue(self):
+        return heapq.heappop(self.itens)[-1]
 
 fila_prioridade = FilaPrioridade()
 fila_prioridade.enqueue('Info Dados', 1) # empresa
@@ -66,3 +69,15 @@ fila_prioridade.enqueue('Gabriel Gomes', 2) # Cliente Normal
 fila_prioridade.enqueue('Mariana Lima', 5) # Cliente idosa
 print(fila_prioridade)
     
+print ('\n')
+
+print(fila_prioridade.dequeue())
+print(fila_prioridade.dequeue())
+print(fila_prioridade.dequeue())
+
+print("\n")
+
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+
