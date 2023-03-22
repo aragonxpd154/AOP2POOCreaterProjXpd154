@@ -1,3 +1,5 @@
+import heapq
+
 class Fila:
     def __init__(self):
         self.itens = []
@@ -41,3 +43,12 @@ print("\n")
 
 # Estacionando o carro que chegou primeiro na fila
 estacionamento.dequeue()
+
+class FilaPrioridade:
+    def __int__(self):
+        self.itens = []
+        self._indice = 0
+    
+    def __str__(self):
+        return '\n'.join([str(i) for i in self.itens])
+    
