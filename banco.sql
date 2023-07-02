@@ -638,3 +638,4 @@ from account a
 where a.product_cd IN ('CHK','SAV','CD','MM');
 
 /* end data population */
+/* USE ONLY MYSQL TO DATA POPULATION  */
